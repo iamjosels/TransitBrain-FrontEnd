@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from '@/App'
+import { MainLayout } from '@/layouts/MainLayout'
 import { AppProviders } from '@/providers/AppProviders'
+import { HomePage } from '@/pages/Home'
 
 import '@/index.css'
 
@@ -15,8 +16,9 @@ if (!rootElement) {
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <AppProviders>
-      <App />
+      <MainLayout title="Dashboard">
+        <HomePage />
+      </MainLayout>
     </AppProviders>
   </React.StrictMode>,
 )
-

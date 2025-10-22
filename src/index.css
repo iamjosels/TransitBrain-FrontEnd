@@ -32,9 +32,17 @@ html, body, #root { height: 100%; }
 
 body {
   @apply bg-neutral-98 text-neutral-20 font-sans;
+  font-family: var(--font-sans);
 }
 
 /* Utilidad compuesta que ya usas en Card */
 .glass-card {
   @apply bg-white/80 backdrop-blur border border-white/40 shadow-subtle rounded-lg;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
 }
