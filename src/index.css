@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+/* === Design tokens con Tailwind v4 (@theme) === */
+@theme {
+  /* Colores de marca */
+  --color-brand-primary: #2563EB;
+  --color-brand-accent:  #00E0FF;
+
+  /* Escala de neutrales personalizada */
+  --color-neutral-20: #1E293B; /* texto principal */
+  --color-neutral-60: #64748B; /* texto secundario */
+  --color-neutral-90: #E5E7EB; /* bordes sutiles */
+  --color-neutral-95: #F3F4F6; /* surface clara */
+  --color-neutral-98: #F9FAFB; /* fondo base */
+
+  /* Tipografías (para usar font-sans y font-display) */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --font-display: 'DM Sans', var(--font-sans);
+
+  /* Sombra y radius personalizados (para shadow-subtle y rounded-lg coherente) */
+  --shadow-subtle: 0 8px 30px 0 rgb(2 6 23 / 0.08);
+  --radius-lg: 0.75rem;
+}
+
+/* (Opcional) Carga de fuentes web
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+*/
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply bg-neutral-98 text-neutral-20 font-sans;
+}
+
+/* Utilidad compuesta que ya usas en Card */
+.glass-card {
+  @apply bg-white/80 backdrop-blur border border-white/40 shadow-subtle rounded-lg;
+}
